@@ -51,12 +51,12 @@ These results are included for **each road scenario folder** (as CSV logs / plot
 ### AV with GoPro setup
 `AV_goPro.jpeg` shows the AV with the GoPro setup.
 
-![AV with GoPro setup](AV_goPro.jpeg)
+![AV with GoPro setup](Devices/AV_goPro.jpeg)
 
 ### GoPro camera
 `GoPro.jpeg` shows the GoPro camera used in the setup.
 
-![GoPro camera](GoPro.jpeg)
+![GoPro camera](Devices/GoPro.jpeg)
 
 ---
 
