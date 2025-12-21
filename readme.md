@@ -12,7 +12,7 @@ For each road scenario, we captured **multiple videos of 10–15 minutes** durat
 - YOLO inference outputs per frame
 - Bhattacharyya similarity score plots
 
-> ✅ **One folder = one road scenario.**
+> **One folder = one road scenario.**
 
 ---
 
