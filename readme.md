@@ -1,66 +1,64 @@
-# Example of Multiple Road Scenario
+# DriveCache
 
-This repository contains road scenario data used for evaluating **DriveCache** in autonomous vehicle (AV) settings.
-The anonymous github link only give acess to 2hb, so we are uploading a subset of yolo inference frames only. We will upload the entire thing if the paper is accepted. So, this is till then for the reviewes.
----
-
-## 📁 Dataset Organization
-
-The dataset is organized into **multiple folders**, where **each folder corresponds to a distinct road scenario**, such as:
-
-- Straight roads  
-- Curvy roads  
-- High-traffic roads  
-- Night-time scenarios  
-
-Each scenario folder contains videos, extracted frames, annotations, or processed outputs relevant to that specific road condition.
-
-> 📌 **Folder name = one road scenario**
+This repository contains the **road scenario datasets** used for evaluating visual similarity–based caching/offloading in AV–edge settings.
 
 ---
 
-## 🎥 Video Capture Details
+## 📁 Road Scenarios (Folder-wise)
 
-- **Camera device:** *Moto Edge 50 Fusion*  
-- Videos were captured directly using the mobile camera mounted on the vehicle.
-- The recordings reflect **real-world driving conditions**, including varying traffic density, lighting, and road geometry.
+All **road scenarios are provided as separate folders** in this repository.
 
----
+For each road scenario, we captured **multiple videos of 10–15 minutes** duration. Each scenario folder includes:
+- YOLO inference outputs per frame
+- Bhattacharyya similarity score plots
 
-## 📷 Image Descriptions
-
-- ![AV with GoPro setup](Devices/AV_goPro.jpeg)
-  Shows the **Autonomous Vehicle (AV) setup with the GoPro camera mounted** for forward-facing road capture.
-
-- ![GoPro camera](Devices/GoPro.jpeg)
-  Shows the **GoPro camera device alone**, used in the AV setup.
-
-These images are provided to visually document the experimental setup.
+> ✅ **One folder = one road scenario.**
 
 ---
 
-## 🔍 Intended Use
+## 🎥 Data Collection Details
 
-The dataset is intended for:
-- Visual similarity analysis across temporal road frames
-- Cache hit/miss behavior evaluation
-- Ablation studies (e.g., with/without temporal windowing)
-- Latency and offloading behavior analysis in AV–edge systems
+### Capture devices
+- **Phone:** *Moto Edge 50 Fusion*
+- Additional capture setup is shown in the images below (AV + GoPro setup)
+
+### Video properties
+- **Frame rate:** 30 FPS  
+- Each video was **converted into frames**, and we ran **YOLO inference on every frame**.
+
+---
+
+## 🤖 YOLO Inference Outputs
+
+For each scenario:
+- Frames were extracted from the recorded videos.
+- YOLO inference was executed on **each extracted frame**.
+- Due to **space constraints** , we include **only a subset of frames/results** in this repository.
+
+📌 **Full dataset (all videos/frames/outputs) will be uploaded after the anonymity constraint is removed.**
+
+---
+
+## 📊 Similarity Results (Bhattacharyya)
+
+We also provide **Bhattacharyya similarity scores** (per frame / per scenario) used in DriveCache experiments.
+These results are included for **each road scenario folder** (as CSV logs / plots, depending on the scenario).
+
+---
+
+## 📷 Experimental Setup Images
+
+### AV with GoPro setup
+`AV_goPro.jpeg` shows the AV with the GoPro setup.
+
+![AV with GoPro setup](AV_goPro.jpeg)
+
+### GoPro camera
+`GoPro.jpeg` shows the GoPro camera used in the setup.
+
+![GoPro camera](GoPro.jpeg)
 
 ---
 
 ## ⚠️ Notes
-
-- Metadata has been stripped from shared images for privacy and reproducibility.
-- The dataset is scenario-centric; users should treat each folder independently during evaluation.
-- Frame indices are preserved to allow temporal analysis.
-
----
-
-## 📄 Citation / Usage
-
-If you use this dataset or setup in academic or industrial work, please cite the associated **DriveCache / vehicular edge computing study** or contact the authors for clarification.
-
----
-
-For questions or clarifications, please open an issue or contact the repository maintainers.
+- The complete dataset will be released after anonymity restrictions are lifted.
