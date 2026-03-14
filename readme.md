@@ -57,6 +57,3 @@ These results are included for **each road scenario folder** (as CSV logs / plot
 ![GoPro camera](Devices/GoPro.jpeg)
 
 ---
-
-## ⚠️ Notes
-- The complete dataset will be released after anonymity restrictions are lifted.
